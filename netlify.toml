@@ -1,0 +1,23 @@
+[build]
+  publish = "build"
+  command = "npm run build" # yoki sizning build komandangiz
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Content-Security-Policy
+    
+    # Permissions-Policy
+    Permissions-Policy = "geolocation=(self), microphone=(), camera=()"
+    
+    # Referrer-Policy
+    Referrer-Policy = "no-referrer-when-downgrade"
+    
+    # Strict-Transport-Security
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    
+    # X-Content-Type-Options
+    X-Content-Type-Options = "nosniff"
+    
+    # X-Frame-Options
+    X-Frame-Options = "SAMEORIGIN"
